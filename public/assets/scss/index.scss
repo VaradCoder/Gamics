@@ -1,0 +1,67 @@
+/* Change the background color of a specific section */
+.section-header {
+    background-color: #f1f1f1;
+  }
+  
+  /* Increase the font size of headings */
+  h1, h2, h3 {
+    font-size: 24px;
+  }
+  
+  /* Add a border to images */
+  img {
+    border: 2px solid #ddd;
+  }
+
+/* Apply styles for screens with a maximum width of 768px (typical for mobile) */
+@media (max-width: 768px) {
+    /* Adjust font size or layout for smaller screens */
+    h1 {
+      font-size: 18px;
+    }
+  }
+/* Add a color change effect to links on hover */
+a:hover {
+    color: #ff6600;
+  }
+  
+  /* Add a background color change to buttons on hover */
+  .button:hover {
+    background-color: #ff6600;
+  }
+
+  /* Change the font family for paragraphs */
+p {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Adjust line height for better readability */
+  body {
+    line-height: 1.6;
+  }
+
+  /* Increase spacing around buttons */
+.button {
+    padding: 10px 20px;
+    margin: 10px;
+  }
+
+  /* Style elements with the custom class "highlight" */
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+    color: #333;
+  }
+
+  /* Set a background image for the hero section */
+.hero {
+    background-image: url('hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Add a smooth transition to button hover effects */
+.button {
+    transition: background-color 0.3s ease;
+  }
+  

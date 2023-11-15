@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gamics - Varad</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/scss/index.scss">
+  
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oxanium:wght@600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- 
+    - server 
+  -->
+
+    
+
+  <!-- 
+    - preload images
+  -->
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header">
+
+    <div class="header-bottom skewBg" data-header>
+      <div class="container">
+
+        <a href="#" class="logo">Gamics</a>
+
+        <nav class="navbar" data-navbar>
+          <ul class="navbar-list">
+
+            <li class="navbar-item">
+              <a href="index.html" class="navbar-link skewBg" data-nav-link>Home</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="./public/Html/Games.html" class="navbar-link skewBg" data-nav-link>Games</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="#live" class="navbar-link skewBg" data-nav-link>Live</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="#features" class="navbar-link skewBg" data-nav-link>Features</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="#shop" class="navbar-link skewBg" data-nav-link>Shop</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="#blog" class="navbar-link skewBg" data-nav-link>Blog</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="#" class="navbar-link skewBg" data-nav-link>Contact</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="#" class="navbar-link skewBg" data-nav-link id="loginLink" style="border: 1px solid red;">Login</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="./Html/SignUp.html" class="navbar-link skewBg" data-nav-link id="loginLink" style="border: 1px solid red;">Sign up</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+
+          <button class="cart-btn" aria-label="cart">
+            <ion-icon name="cart"></ion-icon>
+
+            <span class="cart-badge">0</span>
+          </button>
+
+          <button class="search-btn" aria-label="open search" data-search-toggler>
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+
+          <button class="nav-toggle-btn" aria-label="toggle menu" data-nav-toggler>
+            <ion-icon name="menu-outline" class="menu"></ion-icon>
+            <ion-icon name="close-outline" class="close"></ion-icon>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+
+  </header>
+  <!-- 
+    #Login Form 
+  -->
+  <!-- Login/Signup Popup -->
+<div id="loginPopup" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <!-- Login Form -->
+    <div id="loginForm" class="form">
+      <h2>Login</h2>
+      <form id="loginForm" action="#">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+    <!-- Signup Form -->
+    <div id="signupForm" class="form">
+      <h2>Sign Up</h2>
+      <form id="signupForm" action="#">
+        <label for="newUsername">Username:</label>
+        <input type="text" id="newUsername" name="newUsername" required>
+        <label for="newPassword">Password:</label>
+        <input type="password" id="newPassword" name="newPassword" required>
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+  <!-- 
+    - #SEARCH BOX
+  -->
+
+  <div class="search-container" data-search-box>
+
+    <div class="input-wrapper">
+      <input type="search" name="search" aria-label="search" placeholder="Search here..." class="search-field">
+
+      <button class="search-submit" aria-label="submit search" data-search-toggler>
+        <ion-icon name="search-outline"></ion-icon>
+      </button>
+
+      <button class="search-close" aria-label="close search" data-search-toggler></button>
+    </div>
+
+  </div>
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero" id="home" aria-label="home"
+        style="background-image: url('./assets/images/hero-bg.jpg')">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <p class="hero-subtitle">World Gaming</p>
+
+            <h1 class="h1 hero-title">
+              Create <span class="span">Manage</span> Matches
+            </h1>
+
+            <p class="hero-text">
+              Find technology or people for digital projects in public sector and Find an individual specialist develope
+              researcher.
+            </p>
+
+            <button class="btn skewBg">Read More</button>
+
+          </div>
+
+          <figure class="hero-banner img-holder" style="--width: 700; --height: 700;">
+            <img src="./assets/images/hero-banner.png" width="700" height="700" alt="hero banner" class="w-100">
+          </figure>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #BRAND
+      -->
+
+      <section class="section brand" aria-label="brand">
+        <div class="container">
+
+          <ul class="has-scrollbar">
+
+            <li class="brand-item">
+              <img src="./assets/images/brand-1.png" width="90" height="90" loading="lazy" alt="brand logo">
+            </li>
+
+            <li class="brand-item">
+              <img src="./assets/images/brand-2.png" width="90" height="90" loading="lazy" alt="brand logo">
+            </li>
+
+            <li class="brand-item">
+              <img src="./assets/images/brand-3.png" width="90" height="90" loading="lazy" alt="brand logo">
+            </li>
+
+            <li class="brand-item">
+              <img src="./assets/images/brand-4.png" width="90" height="90" loading="lazy" alt="brand logo">
+            </li>
+
+            <li class="brand-item">
+              <img src="./assets/images/brand-5.png" width="90" height="90" loading="lazy" alt="brand logo">
+            </li>
+
+            <li class="brand-item">
+              <img src="./assets/images/brand-6.png" width="90" height="90" loading="lazy" alt="brand logo">
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <div class="section-wrapper">
+
+        <!-- 
+          - #LATEST GAME
+        -->
+
+        <section class="section latest-game" aria-label="latest game">
+          <div class="container">
+
+            <p class="section-subtitle">Latest Releases</p>
+
+            <h2 class="h2 section-title">
+              Create & <span class="span">Manage</span>
+            </h2>
+
+            <ul class="has-scrollbar">
+
+              <li class="scrollbar-item">
+                <div class="hover">
+                <div class="latest-game-card">
+
+                  <figure class="card-banner img-holder" style="--width: 400; --height: 470;">
+                    <img src="./assets/images/latest-game-1.jpg" width="400" height="470" loading="lazy"
+                      alt="White Walker Daily" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="#" class="card-badge skewBg">Zombie</a>
+
+                    <h3 class="h3">
+                      <a href="#" class="card-title">White Walker <span class="span">Daily</span></a>
+                    </h3>
+
+                    <p class="card-price">
+                      Entry Fee : <span class="span">Free</span>
+                    </p>
+
+                  </div>
+                  </div>
+
+                </div>
+              </li>
+
+              <li class="scrollbar-item">
+                <div class="hover">
+                <div class="latest-game-card">
+
+                  <figure class="card-banner img-holder" style="--width: 400; --height: 470;">
+                    <img src="./assets/images/latest-game-2.jpg" width="400" height="470" loading="lazy"
+                      alt="Hunter Killer II" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="#" class="card-badge skewBg">Adventure</a>
+
+                    <h3 class="h3">
+                      <a href="#" class="card-title">Hunter Killer <span class="span">II</span></a>
+                    </h3>
+
+                    <p class="card-price">
+                      Entry Fee : <span class="span">$25.00</span>
+                    </p>
+
+                  </div>
+                  </div>
+
+                </div>
+              </li>
+
+              <li class="scrollbar-item">
+                <div class="hover">
+                <div class="latest-game-card">
+
+                  <figure class="card-banner img-holder" style="--width: 400; --height: 470;">
+                    <img src="./assets/images/latest-game-3.jpg" width="400" height="470" loading="lazy"
+                      alt="Cyberpunk Daily" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="#" class="card-badge skewBg">Action</a>
+
+                    <h3 class="h3">
+                      <a href="#" class="card-title">Cyberpunk <span class="span">Daily</span></a>
+                    </h3>
+
+                    <p class="card-price">
+                      Entry Fee : <span class="span">$25.00</span>
+                    </p>
+
+                  </div>
+                  </div>
+
+                </div>
+              </li>
+
+              <li class="scrollbar-item">
+                <div class="hover">
+                <br>
+                <div class="latest-game-card">
+
+                  <figure class="card-banner img-holder" style="--width: 400; --height: 470;">
+                    <img src="data:image/jpeg;base64,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" width="400" height="470" loading="lazy"
+                      alt="Minecraft Daily" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="#" class="card-badge skewBg">Fun</a>
+
+                    <h3 class="h3">
+                      <a href="#" class="card-title">Minecraft <span class="span">Daily</span></a>
+                    </h3>
+
+                    <p class="card-price">
+                      Entry Fee : <span class="span">$26.00</span>
+                    </p>
+
+                    </div>
+                  </div>
+
+                </div>
+              </li>
+
+              <li class="scrollbar-item">
+                <div class="hover">
+                <div class="latest-game-card">
+
+                  <figure class="card-banner img-holder" style="--width: 400; --height: 470;">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/a/a5/Grand_Theft_Auto_V.png" width="400" height="470" loading="lazy"
+                      alt="GTA V Daily" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="#" class="card-badge skewBg">Action</a>
+
+                    <h3 class="h3">
+                      <a href="#" class="card-title">GTA V <span class="span">Daily</span></a>
+                    </h3>
+
+                    <p class="card-price">
+                      Entry Fee : <span class="span">$25.00</span>
+                    </p>
+
+                  </div>
+                  </div>
+
+                </div>
+              </li>
+
+            </ul>
+
+          </div>
+        </section>
+
+
+        <!-- 
+          - #Free GAMES
+        -->
+
+        <section class="section latest-game" aria-label="latest game">
+          <div class="container">
+
+            <p class="section-subtitle">Free games</p>
+
+            <h2 class="h2 section-title">
+              Create & <span class="span">Play</span>
+            </h2>
+
+            <ul class="has-scrollbar">
+
+              <li class="scrollbar-item">
+                <div class="hover">
+                <div class="latest-game-card">
+
+                  <figure class="card-banner img-holder" style="--width: 400; --height: 470;">
+                    <img src="./assets/Emmbaled games/trafficracer2300200.png" width="400" height="470" loading="lazy"
+                      alt="Traffic race Daily" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="#" class="card-badge skewBg">Race</a>
+
+                    <h3 class="h3">
+                      <a href="./Emmdet games/Traffic race.html" class="card-title">Traffic race <span class="span">Free</span></a>
+                    </h3>
+
+                    <p class="card-price">
+                      Entry Fee : <span class="span">Free</span>
+                    </p>
+                    <a href="./Emmdet games/Traffic race.html"><button>Play Now</button></a>
+
+                    </div>
+                  </div>
+
+                </div>
+              </li>
+
+              <li class="scrollbar-item">
+                <div class="hover">
+                <div class="latest-game-card">
+
+                  <figure class="card-banner img-holder" style="--width: 400; --height: 470;">
+                    <img src="./assets/Emmbaled games/airportsniper300200.png" width="400" height="470" loading="lazy"
+                      alt="AirportSniper" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="#" class="card-badge skewBg">Adventure</a>
+
+                    <h3 class="h3">
+                      <a href="./Emmdet games/airtraffic.html" class="card-title">Airport Sniper <span class="span">Free</span></a>
+                    </h3>
+
+                    <p class="card-price">
+                      Entry Fee : <span class="span">Free</span>
+                    </p>
+                    <a href="./Emmdet games/airtraffic.html"><button>Play Now</button></a>
+                  </div>
+                  </div>
+
+                </div>
+              </li>
+
+              <li class="scrollbar-item">
+                <div class="hover">
+                <div class="latest-game-card">
+
+                  <figure class="card-banner img-holder" style="--width: 400; --height: 470;">
+                    <img src="./assets/Emmbaled games/MotoX3mPoolPartyTeaser.png" width="400" height="470" loading="lazy"
+                      alt="MotoX3mPoolPartyTeaser" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="#" class="card-badge skewBg">Action</a>
+
+                    <h3 class="h3">
+                      <a href="#" class="card-title">MotoX3mPoolPartyTeaser <span class="span">Daily</span></a>
+                    </h3>
+
+                    <p class="card-price">
+                      Entry Fee : <span class="span">Free</span>
+                    </p>
+                    <a href="./Emmdet games/MotoX3mPoolPartyTeaser.html"><button>Play Now</button></a>
+
+                  </div>
+                  </div>
+
+                </div>
+              </li>
+
+              <li class="scrollbar-item">
+                <div class="hover">
+                <br>
+                <div class="latest-game-card">
+
+                  <figure class="card-banner img-holder" style="--width: 400; --height: 470;">
+                    <img src="data:image/jpeg;base64,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" width="400" height="470" loading="lazy"
+                      alt="Minecraft Daily" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="#" class="card-badge skewBg">Fun</a>
+
+                    <h3 class="h3">
+                      <a href="#" class="card-title">Minecraft <span class="span">Daily</span></a>
+                    </h3>
+
+                    <p class="card-price">
+                      Entry Fee : <span class="span">$26.00</span>
+                    </p>
+
+                    </div>
+                  </div>
+
+                </div>
+              </li>
+
+              <li class="scrollbar-item">
+                <div class="hover">
+                <div class="latest-game-card">
+
+                  <figure class="card-banner img-holder" style="--width: 400; --height: 470;">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/a/a5/Grand_Theft_Auto_V.png" width="400" height="470" loading="lazy"
+                      alt="GTA V Daily" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="#" class="card-badge skewBg">Action</a>
+
+                    <h3 class="h3">
+                      <a href="#" class="card-title">GTA V <span class="span">Daily</span></a>
+                    </h3>
+
+                    <p class="card-price">
+                      Entry Fee : <span class="span">$25.00</span>
+                    </p>
+
+                  </div>
+                  </div>
+
+                </div>
+              </li>
+
+            </ul>
+
+          </div>
+        </section>
+
+      <!-- 
+        - #FEATURED GAME
+      -->
+
+      <section class="section featured-game" id="features" aria-label="featured game">
+        <div class="container">
+
+          <h2 class="h2 section-title">
+            All Released <span class="span">Games</span>
+          </h2>
+
+          <ul class="has-scrollbar">
+
+            <li class="scrollbar-item">
+              <div class="hover">
+              <div class="featured-game-card">
+
+                <figure class="card-banner img-holder" style="--width: 450; --height: 600;">
+                  <img src="./assets/images/featured-game-1.jpg" width="450" height="600" loading="lazy"
+                    alt="Just for Gamers" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title" tabindex="-1">
+                      Just for <span class="span">Gamers</span>
+                    </a>
+                  </h3>
+
+                  <span class="card-meta">
+                    <ion-icon name="notifications"></ion-icon>
+
+                    <span class="span">Playstation 5, Xbox</span>
+                  </span>
+                  </div>
+
+                </div>
+
+                <div class="card-content-overlay">
+
+                  <img src="./assets/images/featured-game-icon.png" width="36" height="61" loading="lazy" alt=""
+                    class="card-icon">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">
+                      Just for <span class="span">Gamers</span>
+                    </a>
+                  </h3>
+
+                  <span class="card-meta">
+                    <ion-icon name="notifications"></ion-icon>
+
+                    <span class="span">Playstation 5, Xbox</span>
+                  </span>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="hover">
+              <div class="featured-game-card">
+
+                <figure class="card-banner img-holder" style="--width: 450; --height: 600;">
+                  <img src="./assets/images/featured-game-2.jpg" width="450" height="600" loading="lazy"
+                    alt="Need for Speed" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title" tabindex="-1">
+                      Need for <span class="span">Speed</span>
+                    </a>
+                  </h3>
+
+                  <span class="card-meta">
+                    <ion-icon name="notifications"></ion-icon>
+
+                    <span class="span">Playstation 5, Xbox</span>
+                  </span>
+                  </div>
+
+                </div>
+
+                <div class="card-content-overlay">
+
+                  <img src="./assets/images/featured-game-icon.png" width="36" height="61" loading="lazy" alt=""
+                    class="card-icon">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">
+                      Need for <span class="span">Speed</span>
+                    </a>
+                  </h3>
+
+                  <span class="card-meta">
+                    <ion-icon name="notifications"></ion-icon>
+
+                    <span class="span">Playstation 5, Xbox</span>
+                  </span>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="hover">
+              <div class="featured-game-card">
+
+                <figure class="card-banner img-holder" style="--width: 450; --height: 600;">
+                  <img src="./assets/images/featured-game-3.jpg" width="450" height="600" loading="lazy"
+                    alt="Egypt Hunting Gamers" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title" tabindex="-1">
+                      Egypt Hunting <span class="span">Gamers</span>
+                    </a>
+                  </h3>
+
+                  <span class="card-meta">
+                    <ion-icon name="notifications"></ion-icon>
+
+                    <span class="span">Playstation 5, Xbox</span>
+                  </span>
+                  </div>
+
+                </div>
+
+                <div class="card-content-overlay">
+
+                  <img src="./assets/images/featured-game-icon.png" width="36" height="61" loading="lazy" alt=""
+                    class="card-icon">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">
+                      Egypt Hunting <span class="span">Gamers</span>
+                    </a>
+                  </h3>
+
+                  <span class="card-meta">
+                    <ion-icon name="notifications"></ion-icon>
+
+                    <span class="span">Playstation 5, Xbox</span>
+                  </span>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="hover">
+              <div class="featured-game-card">
+
+                <figure class="card-banner img-holder" style="--width: 450; --height: 600;">
+                  <img src="./assets/images/featured-game-4.jpg" width="450" height="600" loading="lazy"
+                    alt="Just for Gamers" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title" tabindex="-1">
+                      Just for <span class="span">Gamers</span>
+                    </a>
+                  </h3>
+
+                  <span class="card-meta">
+                    <ion-icon name="notifications"></ion-icon>
+
+                    <span class="span">Playstation 5, Xbox</span>
+                  </span>
+                  </div>
+
+                </div>
+
+                <div class="card-content-overlay">
+
+                  <img src="./assets/images/featured-game-icon.png" width="36" height="61" loading="lazy" alt=""
+                    class="card-icon">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">
+                      Just for <span class="span">Gamers</span>
+                    </a>
+                  </h3>
+
+                  <span class="card-meta">
+                    <ion-icon name="notifications"></ion-icon>
+
+                    <span class="span">Playstation 5, Xbox</span>
+                  </span>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #SHOP
+      -->
+
+      <section class="section shop" id="shop" aria-label="shop"
+        style="background-image: url('./assets/images/shop-bg.jpg')">
+        <div class="container">
+
+          <h2 class="h2 section-title">
+            Gaming Product <span class="span">Corner</span>
+          </h2>
+
+          <p class="section-text">
+            Compete with 100 players on a remote island for winner takes showdown known issue where certain skin
+            strategic
+          </p>
+
+          <ul class="has-scrollbar">
+
+            <li class="scrollbar-item">
+              <div class="hover">
+              <div class="shop-card">
+
+                <figure class="card-banner img-holder" style="--width: 300; --height: 260;">
+                  <img src="./assets/images/shop-img-1.jpg" width="300" height="260" loading="lazy"
+                    alt="Women Black T-Shirt" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <a href="#" class="card-badge skewBg">t-shirt</a>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Women Black T-Shirt</a>
+                  </h3>
+
+                  <div class="card-wrapper">
+                    <p class="card-price">$29.00</p>
+
+                    <button class="card-btn">
+                      <ion-icon n
+                      </div>ame="basket"></ion-icon>
+                    </button>
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="hover">
+              <div class="shop-card">
+
+                <figure class="card-banner img-holder" style="--width: 300; --height: 260;">
+                  <img src="./assets/images/shop-img-2.jpg" width="300" height="260" loading="lazy"
+                    alt="Gears 5 Xbox Controller" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <a href="#" class="card-badge skewBg">x-box</a>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Gears 5 Xbox Controller</a>
+                  </h3>
+
+                  <div class="card-wrapper">
+                    <p class="card-price">$29.00</p>
+
+                    <button class="card-btn">
+                      <ion-icon n
+                      </div>ame="basket"></ion-icon>
+                    </button>
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="hover">
+              <div class="shop-card">
+
+                <figure class="card-banner img-holder" style="--width: 300; --height: 260;">
+                  <img src="./assets/images/shop-img-3.jpg" width="300" height="260" loading="lazy"
+                    alt="GeForce RTX 2070" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <a href="#" class="card-badge skewBg">Graphics</a>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">GeForce RTX 2070</a>
+                  </h3>
+
+                  <div class="card-wrapper">
+                    <p class="card-price">$29.00</p>
+
+                    <button class="card-btn">
+                      <ion-icon n
+                      </div>ame="basket"></ion-icon>
+                    </button>
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="hover">
+              <div class="shop-card">
+
+                <figure class="card-banner img-holder" style="--width: 300; --height: 260;">
+                  <img src="./assets/images/shop-img-4.jpg" width="300" height="260" loading="lazy"
+                    alt="Virtual Reality Smiled" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <a href="#" class="card-badge skewBg">VR-Box</a>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Virtual Reality Smiled</a>
+                  </h3>
+
+                  <div class="card-wrapper">
+                    <p class="card-price">$29.00</p>
+
+                    <button class="card-btn">
+                      <ion-icon n
+                    </div> ame="basket"></ion-icon>
+                    </button>
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #BLOG
+      -->
+
+      <section class="section blog" id="blog" aria-label="blog">
+        <div class="container">
+
+          <h2 class="h2 section-title">
+            Latest News & <span class="span">Articles</span>
+          </h2>
+
+          <p class="section-text">
+            Compete With 100 Players On A Remote Island For Winner Takes Showdown Known Issue Where Certain Skin
+            Strategic
+          </p>
+
+          <ul class="blog-list">
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 400; --height: 290;">
+                  <img src="./assets/images/blog-1.jpg" width="400" height="290" loading="lazy"
+                    alt="Shooter Action Video" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <ul class="card-meta-list">
+
+                    <li class="card-meta-item">
+                      <ion-icon name="person-outline"></ion-icon>
+
+                      <a href="#" class="item-text">Admin</a>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <ion-icon name="calendar-outline"></ion-icon>
+
+                      <time datetime="2022-09-19" class="item-text">September 19, 2022</time>
+                    </li>
+
+                  </ul>
+
+                  <h3>
+                    <a href="#" class="card-title">Shooter Action Video</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Compete With 100 Players On A Remote Island Thats Winner Takes Showdown Known Issue.
+                  </p>
+
+                  <a href="#" class="card-link">
+                    <span class="span">Read More</span>
+
+                    <ion-icon name="caret-forward"></ion-icon>
+                  </a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 400; --height: 290;">
+                  <img src="./assets/images/blog-2.jpg" width="400" height="290" loading="lazy" alt="The Walking Dead"
+                    class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <ul class="card-meta-list">
+
+                    <li class="card-meta-item">
+                      <ion-icon name="person-outline"></ion-icon>
+
+                      <a href="#" class="item-text">Admin</a>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <ion-icon name="calendar-outline"></ion-icon>
+
+                      <time datetime="2022-09-19" class="item-text">September 19, 2022</time>
+                    </li>
+
+                  </ul>
+
+                  <h3>
+                    <a href="#" class="card-title">The Walking Dead</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Compete With 100 Players On A Remote Island Thats Winner Takes Showdown Known Issue.
+                  </p>
+
+                  <a href="#" class="card-link">
+                    <span class="span">Read More</span>
+
+                    <ion-icon name="caret-forward"></ion-icon>
+                  </a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 400; --height: 290;">
+                  <img src="./assets/images/blog-3.jpg" width="400" height="290" loading="lazy"
+                    alt="Defense Of The Ancients" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <ul class="card-meta-list">
+
+                    <li class="card-meta-item">
+                      <ion-icon name="person-outline"></ion-icon>
+
+                      <a href="#" class="item-text">Admin</a>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <ion-icon name="calendar-outline"></ion-icon>
+
+                      <time datetime="2022-09-19" class="item-text">September 19, 2022</time>
+                    </li>
+
+                  </ul>
+
+                  <h3>
+                    <a href="#" class="card-title">Defense Of The Ancients</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Compete With 100 Players On A Remote Island Thats Winner Takes Showdown Known Issue.
+                  </p>
+
+                  <a href="#" class="card-link">
+                    <span class="span">Read More</span>
+
+                    <ion-icon name="caret-forward"></ion-icon>
+                  </a>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #NEWSLETTER
+      -->
+
+      <section class="newsletter" aria-label="newsletter">
+        <div class="container">
+
+          <div class="newsletter-card">
+
+            <h2 class="h2">
+              Our <span class="span">Newsletter</span>
+            </h2>
+
+            <form action="" class="newsletter-form">
+
+              <div class="input-wrapper skewBg">
+                <input type="email" name="email_address" aria-label="email" placeholder="Enter your email..." required
+                  class="email-field">
+
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+
+              <button type="submit" class="btn newsletter-btn skewBg">
+                <span class="span">Subscribe</span>
+
+                <ion-icon name="paper-plane" aria-hidden="true"></ion-icon>
+              </button>
+
+            </form>
+
+          </div>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">Gamics</a>
+
+          <p class="footer-text">
+            Gamics marketplace the relase etras thats sheets continig passag.
+          </p>
+
+          <ul class="contact-list">
+
+            <li class="contact-item">
+              <div class="contact-icon">
+                <ion-icon name="location"></ion-icon>
+              </div>
+
+              <address class="item-text">
+                Address : PO Box W75 Street lan West new queens
+              </address>
+            </li>
+
+            <li class="contact-item">
+              <div class="contact-icon">
+                <ion-icon name="headset"></ion-icon>
+              </div>
+
+              <a href="tel:+241245654235" class="item-text">Phone : -------</a>
+            </li>
+
+            <li class="contact-item">
+              <div class="contact-icon">
+                <ion-icon name="mail-open"></ion-icon>
+              </div>
+
+              <a href="mailto:info@exemple.com" class="item-text">Email : Gamics.Official.com</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Products</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Graphics (26)</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Backgrounds (11)</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Fonts (9)</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Music (3)</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Photography (3)</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Need Help?</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Terms & Conditions</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Privacy Policy</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Refund Policy</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Affiliate</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Use Cases</a>
+          </li>
+
+        </ul>
+
+        <div class="footer-wrapper">
+
+          <div class="social-wrapper">
+
+            <p class="footer-list-title">Follow Us</p>
+
+            <ul class="social-list">
+
+              <li>
+                <a href="#" class="social-link" style="background-color: #3b5998">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link" style="background-color: #55acee">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link" style="background-color: #d71e18">
+                  <ion-icon name="logo-pinterest"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link" style="background-color: #1565c0">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <div class="footer-newsletter">
+
+            <p class="footer-list-title">Newsletter Sign Up</p>
+
+            <form action="" class="footer-newsletter">
+              <input type="email" name="email_address" aria-label="email" placeholder="Enter your email" required
+                class="email-field">
+
+              <button type="submit" class="footer-btn" aria-label="submit">
+                <ion-icon name="rocket"></ion-icon>
+              </button>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy; 2022 Gamics. All Right Reserved by <a href="#" class="copyright-link">codewithsadee</a>
+        </p>
+
+        <img src="./assets/images/footer-bottom-img.png" width="340" height="21" loading="lazy" alt=""
+          class="footer-bottom-img">
+
+      </div>
+    </div>
+
+  </footer>
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>

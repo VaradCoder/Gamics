@@ -1,0 +1,357 @@
+/*-----------------------------------*/
+/* Copyright 2022 CodeWithSadee */
+/*-----------------------------------*/
+
+/*-----------------------------------*/
+/* Custom Properties */
+/*-----------------------------------*/
+
+:root {
+    /* Colors */
+    --black-background: hsla(222, 18%, 11%, 0.95);
+    --raisin-black-1: hsl(0, 0%, 16%);
+    --raisin-black-2: hsl(236, 17%, 17%);
+    --raisin-black-3: hsl(280, 11%, 11%);
+    --raisin-black-4: hsl(280, 8%, 15%);
+    --english-violet: hsl(274, 21%, 23%);
+    --eerie-black-1: hsl(277, 25%, 10%);
+    --eerie-black-2: hsl(280, 7%, 8%);
+    --roman-silver: hsl(220, 6%, 59%);
+    --quick-silver: hsl(0, 1%, 65%);
+    --light-gray-1: hsl(0, 0%, 80%);
+    --light-gray-2: hsl(0, 2%, 82%);
+    --marigold-75: hsla(42, 99%, 46%, 0.75);
+    --xiketic-90: hsla(280, 37%, 8%, 0.9);
+    --cultured-2: hsl(0, 0%, 97%);
+    --marigold: hsl(42, 99%, 46%);
+    --platinum: hsl(0, 0%, 89%);
+    --dim-gray: hsl(0, 0%, 42%);
+    --white-15: hsla(0, 0%, 100%, 0.15);
+    --white-10: hsla(0, 0%, 100%, 0.1);
+    --xiketic: hsl(277, 25%, 10%);
+    --silver: hsl(0, 0%, 78%);
+    --white: hsl(0, 0%, 100%);
+    --jet: hsl(236, 13%, 23%);
+
+    /* Typography */
+    --font-oxanium: 'Oxanium', cursive;
+    --font-poppins: 'Poppins', sans-serif;
+
+    --font-size-1: 7rem;
+    --font-size-2: 4.5rem;
+    --font-size-3: 3.6rem;
+    --font-size-4: 2.4rem;
+    --font-size-5: 2.2rem;
+    --font-size-6: 2rem;
+    --font-size-7: 1.6rem;
+    --font-size-8: 1.5rem;
+    --font-size-9: 1.4rem;
+    --font-size-10: 1.3rem;
+    --font-size-11: 1.2rem;
+
+    --font-weight-500: 500;
+    --font-weight-600: 600;
+    --font-weight-700: 700;
+    --font-weight-800: 800;
+
+    /* Spacing */
+    --section-padding: 120px;
+
+    /* Gradient */
+    --gradient: radial-gradient(circle, hsl(250, 7%, 17%), hsl(250, 11%, 11%));
+
+    /* Box Shadow */
+    --shadow-1: 0px 2px 8px 0px hsla(0, 0%, 0%, 0.2), inset 0px 2px 8px 0px hsla(0, 0%, 0%, 0.4);
+    --shadow-2: 0px 5px 10px 1px hsla(0, 0%, 0%, 0.4);
+    --shadow-3: 0px 5px 10px 1px hsla(219, 98%, 17%, 0.2);
+    --shadow-4: 0px 5px 10px 1px hsla(0, 0%, 0%, 0.15);
+
+    /* Transition */
+    --transition: 0.25s ease;
+    --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
+}
+
+/*-----------------------------------*/
+/* Styling for the entire webpage */
+/* Reset default browser styles and set background and text color */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--black-background);
+    color: var(--white);
+    font-family: var(--font-poppins), sans-serif;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    height: 100%;
+    width: 150px;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background-color: #171717;
+    padding-top: 20px;
+}
+
+/* Navigation Links Styling */
+.sidebar a {
+    padding: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: var(--font-weight-500);
+    color: var(--white);
+    display: block;
+    transition: var(--transition);
+}
+
+/* Navigation Links Hover Styling */
+.sidebar a:hover {
+    color: var(--marigold-75);
+}
+
+/* Header Styling */
+.header {
+    position: relative;
+    min-height: 1px;
+}
+
+/* Header Bottom Styling */
+.header-bottom {
+    position: absolute;
+    top: calc(100% - 1px);
+    left: 0;
+    width: 100%;
+    background-color: #181717;
+    padding-block: 10px;
+    z-index: 4;
+}
+
+/* Header Bottom Active Animation */
+.header-bottom.active {
+    position: fixed;
+    top: -5px;
+    animation: slideIn 0.5s var(--cubic-out) forwards;
+}
+
+/* Keyframe Animation for Header */
+@keyframes slideIn {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+/* Container for Logo and Navigation */
+.header-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo Styling */
+.logo {
+    color: var(--white);
+    font-family: var(--font-oxanium), cursive;
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-800);
+    transform: skewX(var(--skewX, -16deg));
+    background-color: var(--marigold);
+}
+
+/* Search Container */
+.search-container {
+    background-color: #FFf;
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 40px;
+    z-index: 6;
+    visibility: hidden;
+    opacity: 0;
+    transition: var(--transition);
+    border: 1px solid var(--white);
+}
+
+/* Active Search Container */
+.search-container.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Search Input Field */
+.search-container .search-field {
+    color: var(--white);
+    font-size: 2rem;
+    padding: 20px;
+    padding-inline-end: 60px;
+    border-block-end: 3px solid var(--white-10);
+    outline: none;
+    transition: var(--transition);
+}
+
+/* Search Input Field Focus */
+.search-container .search-field:focus {
+    border-color: var(--light-gray-2);
+}
+
+/* Search Submit Button */
+.search-container .search-submit {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 25px;
+    color: var(--marigold);
+}
+
+/* Close Search Button */
+.search-container .search-close {
+    position: fixed;
+    inset: 0;
+    cursor: default;
+    z-index: -1;
+}
+
+/* User Photo Styling */
+.userphoto {
+    position: relative;
+}
+
+.userphoto img {
+    padding: 20px;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+/* Card Styling */
+.card {
+    border: none; /* No borders for gaming cards */
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    overflow: hidden;
+    background-color: var(--black-background);
+    position: relative;
+    max-width: 220px;
+    margin: 5px auto;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 6px rgb(246, 0, 0);
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card .card-content {
+    padding: 15px;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.card p {
+    font-size: 1rem;
+    color: var(--dim-gray);
+}
+
+.card button.download-button {
+    background-color: #007bff;
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card button.download-button:hover {
+    background-color: #0056b3;
+}
+
+/* Card Animation */
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.card-enter {
+    animation: slideInFromTop 0.5s ease-in-out forwards;
+    opacity: 0;
+}
+
+/* Container for Cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        max-width: 100%;
+    }
+}
+
+/* Styling for the Gaming Section */
+.gaming-section {
+    padding: 10px;
+    margin-top: 70px;
+}
+
+/* Adjust the sidebar position to accommodate the gaming section */
+.sidebar {
+    height: calc(100% - 70px);
+    top: 70px;
+}
+
+/* Ensure the gaming section is below the header */
+.header {
+    z-index: 1;
+}
+
+/* Style for the banner section */
+.banner {
+    background-image: url('banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    text-align: center;
+    padding: 100px 0;
+}
+
+.banner-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.banner h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.banner p {
+    font-size: 1.5rem;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/assets/css/SignUp.css">
+    <title>Gamics Sign-Up</title>
+</head>
+<body>
+
+    
+
+
+    <div class="signup-container">
+        <div class="signup-form">
+            <h1>Join the Gaming Community</h1>
+            <form action="/signup" method="POST">
+                <label for="username">Choose a Gamertag:</label>
+                <input type="text" id="username" name="username" placeholder="Enter your Gamertag" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                
+                <button type="submit">Sign Up</button>
+            </form>
+            <br>
+            <a href="./public/index.html"><button type="submit">Back To Home</button></a>
+        </div>
+    </div>
+</body>
+<script src="/server.js"></script>
+</html>
